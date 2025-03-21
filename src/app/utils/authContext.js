@@ -1,6 +1,7 @@
 "use client";
 import { createContext, useState, useEffect, useContext } from "react";
 import { useRouter } from "next/navigation";
+import { saveToken } from "./localStorage";
 
 const AuthContext = createContext();
 
@@ -18,9 +19,8 @@ export function AuthProvider({ children }) {
   };
 
   const login = (userToken, keepMeLoggedIn) => {
-    setToken(userToken);
+    saveToken(userToken);
     setKeepLoggedIn(keepMeLoggedIn);
-    localStorage.setItem("token", userToken);
 
     clearAutoLogoutTimer();
     if (!keepMeLoggedIn) {
@@ -33,17 +33,17 @@ export function AuthProvider({ children }) {
   const logout = () => {
     clearAutoLogoutTimer();
     setToken(null);
-    localStorage.removeItem("token");
+    removeToken()
     router.push("/login");
   };
 
   useEffect(() => {
-    const storedToken = localStorage.getItem("token");
+    const storedToken = saveToken();
     if (storedToken) {
       setToken(storedToken);
     }
     return () => clearAutoLogoutTimer();
-  }, []);
+  }, [clearAutoLogoutTimer]);
 
   return (
     <AuthContext.Provider value={{ token, login, logout }}>

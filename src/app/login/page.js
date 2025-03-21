@@ -19,7 +19,6 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!email || !password) {
       setError("please fill required fields");
       return;
@@ -123,7 +122,7 @@ export default function Login() {
             </button>
           </form>
           <p className="text-gray-600 text-center text-xs mt-4">
-            Don't have an account?
+           {`Don't have an account?`}
             <Link
               href="/registration"
               className="text-[#ED1450] hover:underline"

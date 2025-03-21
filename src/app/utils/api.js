@@ -1,6 +1,8 @@
+const MOCK_API_URL = process.env.NEXT_PUBLIC_MOCK_API_URL;
+
 export const LoginRequest = async(email, password) => {
   try {
-    const response = await fetch( `https://67dc88a1e00db03c40685335.mockapi.io/users/details?email=${encodeURIComponent(
+    const response = await fetch( `${MOCK_API_URL}?email=${encodeURIComponent(
       email
     )}&password=${encodeURIComponent(password)}`,
       {
@@ -22,7 +24,7 @@ export const LoginRequest = async(email, password) => {
 export const RegisterUser = async (userData) => {
   try {
     const response = await fetch(
-      "https://67dc88a1e00db03c40685335.mockapi.io/users/details",
+      `${MOCK_API_URL}`,
       {
         method: "POST",
         body: JSON.stringify(userData),
