@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mini Business Intelligence Tool
 
-## Getting Started
+## 🚀 Project Overview
 
-First, run the development server:
+This project is a **Business Intelligence (BI) tool** built using **Next.js**, designed to provide a visually appealing and fully functional dashboard. It features **user authentication**, **data visualization**, and **key business metrics**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project highlights frontend development, UI/UX design, state management, and deployment skills.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📌 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔑 User Authentication
 
-## Learn More
+- **Login Page:**
+  - Users log in with an email and password.
+  - "Keep me logged in" checkbox available.
+  - Auto-logout users after 1 minute of inactivity (if not selected).
+- **Registration Page:**
+  - Users register with an email, password, and full name.
+  - Proper form validation and error handling.
+- **Protected Routes:**
+  - The dashboard is restricted to authenticated users.
 
-To learn more about Next.js, take a look at the following resources:
+### 📊 Dashboard Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Metrics Summary:**
+  - Displays cards with essential business metrics:
+    - Total Users
+    - Active Sessions
+    - Sales Revenue
+- **Data Visualization:**
+  - **Line Chart:** Sales trends over time.
+  - **Bar Chart:** User growth.
+  - **Pie/Donut Chart:** Category distribution.
+- **Data Table:**
+  - Display sample user or sales data.
+  - Sorting and filtering functionality.
+- **Auto Logout:**
+  - Users are logged out after 1 minute of inactivity (if "Keep me logged in" is unchecked).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend:** [Next.js](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Component Library:** [MUI](https://mui.com/)&#x20;
+- **Data Visualization:** [Recharts](https://recharts.org/), [Chart.js](https://www.chartjs.org/), or [ApexCharts](https://apexcharts.com/)
+- **State Management:** React Context API
+- API Mocking: [Mock API](https://mockapi.io/)
+- Protected Route: React Context
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📂 Project Setup & Installation
+
+### 1. Clone the Repository
+
+### 2. Install Dependencies
+
+npm install
+
+### 3. Run the Development Server
+
+Access the app at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📤 Deployment
+
+The application is deployed on [Netlify](https://netlify.com/). You can access it here: [LIVE DEMO](https://bi-tool.netlify.app)
