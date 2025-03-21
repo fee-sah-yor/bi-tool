@@ -69,4 +69,4 @@ Access the app at [http://localhost:3000](http://localhost:3000).
 
 ## 📤 Deployment
 
-The application is deployed on [Netlify](https://netlify.com/). You can access it here: [LIVE DEMO](https://bi-tool.netlify.app)
+The application is deployed on [Netlify](https://netlify.com/). You can access it here: [LIVE DEMO] (https://bi-tool.netlify.app)
